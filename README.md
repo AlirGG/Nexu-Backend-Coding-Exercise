@@ -9,6 +9,8 @@ Before you can build and run the API, you must have the following software insta
 
 Golang 1.15 or later
 MongoDB 4.0 or later
+
+
 Building the API
 
 
@@ -20,9 +22,11 @@ Run the following command to download the necessary dependencies:
 go mod download
 
 
+
 Run the following command to build the API binary:
 
 go build -o api
+
 
 
 Running the API
@@ -33,6 +37,7 @@ Run the following command to start the API:
 
 go run main.go
 The API will start running on port 8000. You can access the API using a web browser or a tool like Postman or Thunder Client in VSCode(used for internal tests).
+
 
 Example of tests output in Thunder Client:
 
@@ -174,19 +179,26 @@ response:
   ...]
 
 
+
 Automated Tests were contemplated but not finished in time, a test_controller.txt doc is made where the code for test_controller.go is implemented but it has some bugs to handle that cannot been handled in time.
 Consider that code as automated test and use tools like Postman or Thunder Client to do tests in the meantime.
+
 
 
 
 Notes on Thought Process
 The RESTful API is designed to provide information about car brands and their models from a MongoDB database. The API uses the Gorilla Mux router to handle incoming requests and the MongoDB driver to communicate with the database.
 
+
 The main.go file is responsible for starting the server and defining the server settings. The controller.go file contains the functions that handle incoming requests and interact with the database. The models.go file contains the structures that define the data stored in the database.
+
 
 To test the API, the standard Go testing package is used. The tests are designed to cover all the functions in the controller.go file, and they ensure that the API is functioning correctly and returning the expected data.
 
+
+
 Issues Encountered
 There were no issues encountered while running, or testing the API. However, if you encounter any issues while using the API, please feel free to contact us for assistance.
+
 
 The Issues encountered while building, where not coding issues but understanding the Coding Exercise arquitecture, the arquitecture given was not complete and some assumptions had to be made, 
