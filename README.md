@@ -1,7 +1,7 @@
-Building, Running, and Testing the RESTful API
+Building, Running, and Testing the REST API
 
 Introduction
-This RESTful API is designed to provide information about car brands and their models from a MongoDB database in Atlas. This document provides instructions for building, running, and testing the API. The API is build in Golang and tested in Thunder Client for VS Code.
+This REST API is designed to provide information about car brands and their models from a MongoDB database in Atlas. This document provides instructions for building, running, and testing the API. The API is build in Golang and tested in Thunder Client for VS Code.
 
 
 Prerequisites
