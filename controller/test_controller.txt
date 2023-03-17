@@ -1,0 +1,76 @@
+// package controller
+
+// import (
+// 	"net/http"
+// 	"net/http/httptest"
+// 	"testing"
+// )
+
+// // func TestGetBrands(t *testing.T) {
+// // 	req, err := http.NewRequest("GET", "/brands", nil)
+// // 	if err != nil {
+// // 		t.Fatal(err)
+// // 	}
+
+// // 	rr := httptest.NewRecorder()
+// // 	handler := http.HandlerFunc(GetBrands)
+// // 	handler.ServeHTTP(rr, req)
+
+// // 	if status := rr.Code; status != http.StatusOK {
+// // 		t.Errorf("handler returned wrong status code: got %v want %v",
+// // 			status, http.StatusOK)
+// // 	}
+
+// // 	expected := `[{"average_price":800,"id":1,"nombre":"Brand 1"}]`
+// // 	if rr.Body.String() != expected {
+// // 		t.Errorf("handler returned unexpected body: got %v want %v",
+// // 			rr.Body.String(), expected)
+// // 	}
+// // }
+
+// func TestGetBrands(t *testing.T) {
+// 	req, err := http.NewRequest("GET", "/brands", nil)
+// 	if err != nil {
+// 		t.Fatal(err)
+// 	}
+
+// 	rr := httptest.NewRecorder()
+// 	handler := http.HandlerFunc(GetBrands)
+
+// 	handler.ServeHTTP(rr, req)
+
+// 	if status := rr.Code; status != http.StatusOK {
+// 		t.Errorf("handler returned wrong status code: got %v want %v",
+// 			status, http.StatusOK)
+// 	}
+
+// 	expectedContentType := "application/json"
+// 	if contentType := rr.Header().Get("Content-Type"); contentType != expectedContentType {
+// 		t.Errorf("handler returned wrong content type: got %v want %v",
+// 			contentType, expectedContentType)
+// 	}
+
+// 	// TODO: Add more assertions on the response body
+// }
+
+// func TestGetModelsForBrand(t *testing.T) {
+// 	req, err := http.NewRequest("GET", "/brands/Brand%201/models", nil)
+// 	if err != nil {
+// 		t.Fatal(err)
+// 	}
+
+// 	rr := httptest.NewRecorder()
+// 	handler := http.HandlerFunc(GetModelsForBrand)
+// 	handler.ServeHTTP(rr, req)
+
+// 	if status := rr.Code; status != http.StatusOK {
+// 		t.Errorf("handler returned wrong status code: got %v want %v",
+// 			status, http.StatusOK)
+// 	}
+
+// 	expected := `[{"name":"Model 1","price":500},{"name":"Model 2","price":1000}]`
+// 	if rr.Body.String() != expected {
+// 		t.Errorf("handler returned unexpected body: got %v want %v",
+// 			rr.Body.String(), expected)
+// 	}
+// }
